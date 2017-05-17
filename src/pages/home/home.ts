@@ -52,13 +52,11 @@ export class HomePage {
   }
 
    removeItem(item){
- 
-    for(i = 0; i < this.items.length; i++) {
- 
-      if(this.items[i] == item){
-        this.items.splice(i, 1);
-      }
+    let index = this.items.indexOf(item);
+
+    if(index > -1){
+      this.items.splice(index, 1);
     }
-  }
+}
 
 }
