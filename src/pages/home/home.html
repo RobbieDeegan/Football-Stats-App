@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar color="danger">
   	<ion-title>
-  		Add Training Sessions and Matches
+  		Add New Event
   	</ion-title>
   	<ion-buttons end>
   		<button ion-button icon-only (click)="addItem()"><ion-icon name="add"></ion-icon></button>
@@ -11,13 +11,8 @@
 
 <ion-content>
   <ion-list>
-    <ion-item-sliding *ngFor="let item of items" (click)="viewItem(item)">
+    <ion-item *ngFor="let item of items" (click)="viewItem(item)"><button danger (click)="removeItem(item)"></button>
 			<ion-item>{{item.title}}</ion-item>
-
-				<ion-item-options>
-					<button danger (click)="removeItem(item)"><icon trash></icon></button>
-				</ion-item-options>
-
-		</ion-item-sliding>
+		</ion-item>
   </ion-list>
 </ion-content>

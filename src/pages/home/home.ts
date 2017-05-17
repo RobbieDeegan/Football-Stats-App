@@ -27,11 +27,9 @@ export class HomePage {
   }
 
   addItem(){
-
     let addModal = this.modalCtrl.create(AddItemPage);
     
     addModal.onDidDismiss((item) => {
-
       if(item){
         this.saveItem(item);
       }
@@ -52,11 +50,11 @@ export class HomePage {
   }
 
    removeItem(item){
-    let index = this.items.indexOf(item);
+      let index = this.items.indexOf(item);
 
-    if(index > -1){
-      this.items.splice(index, 1);
+      if(index > -1){
+        this.items.splice(index, 1);
+      }
     }
-}
 
 }

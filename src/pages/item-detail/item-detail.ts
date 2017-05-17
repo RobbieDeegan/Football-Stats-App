@@ -8,7 +8,7 @@ import { NavParams } from 'ionic-angular';
 export class ItemDetailPage {
 
   title;
-  description;
+  location;
 
   constructor(public navParams: NavParams){
 
@@ -16,7 +16,7 @@ export class ItemDetailPage {
 
   ionViewDidLoad() {
     this.title = this.navParams.get('item').title;
-    this.description = this.navParams.get('item').description;
+    this.location = this.navParams.get('item').location;
   }
 
 }

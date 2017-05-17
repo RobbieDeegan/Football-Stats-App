@@ -8,17 +8,16 @@ import { NavController, ViewController } from 'ionic-angular';
 export class AddItemPage {
 
 	title;
-	description;
+	location;
 
 	constructor(public nav: NavController, public view: ViewController) {
 
 	}
 
 	saveItem(){
-
 		let newItem = {
 		  title: this.title,
-		  description: this.description
+		  location: this.location
 		};
 
 		this.view.dismiss(newItem);
@@ -28,5 +27,4 @@ export class AddItemPage {
 	close(){
 		this.view.dismiss();
 	}
-
 }

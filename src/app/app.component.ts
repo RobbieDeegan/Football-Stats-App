@@ -3,7 +3,6 @@ import { Platform } from 'ionic-angular';
 
 import { HomePage } from '../pages/home/home';
 
-
 @Component({
   template: `<ion-nav [root]="rootPage"></ion-nav>`
 })
